@@ -523,10 +523,6 @@ footer {
         flex-direction: column;
         align-items: center;
         padding: 0 20px 40px; /* zmniejszony padding dolny */
-        background-image: url('img/11.png');
-        background-repeat: no-repeat;
-        background-position: center top;
-        background-size: contain; /* mniejsze tło */
     }
     .hero-logo {
         max-width: 80%;
@@ -570,7 +566,7 @@ footer {
         display: none;
     }
 
-    /* Pokazujemy slider z jednym zdjęciem */
+    /* Pokazujemy slider z kilkoma zdjęciami */
     .gallery-slider {
         display: block;
         width: 100%;
@@ -579,6 +575,8 @@ footer {
         position: relative;
         overflow: hidden;
         border-radius: 15px; /* border-radius slidera */
+        padding-bottom: 0;  /* usuwam padding */
+        margin-bottom: 8px;   
     }
 
     .gallery-slider img {
@@ -600,12 +598,6 @@ footer {
         transform: translateX(0);
         position: relative;
         z-index: 1;
-    }
-
-    /* Usuwamy biały pasek pod sliderem */
-    .gallery-slider {
-        padding-bottom: 0;
-        margin-bottom: 0;
     }
 
     .gallery-section h2 {
@@ -635,7 +627,7 @@ footer {
         background-position: center;
         background-size: contain;
         height: auto; /* zmieniaj w razie potrzeby */
-        padding: 100px 20px; /* dostosuj według potrzeby */
+        padding: 100px 20px 0 20px; /* usunięty dolny padding */
     }
 
     /* Stopka */

@@ -74,3 +74,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// === Automatyczny slider galerii na telefonach ===
+window.addEventListener('load', () => {
+    const sliderImg = document.querySelector('.gallery-slider img');
+    if (!sliderImg) return; // Jeśli nie ma slidera, nic nie robimy
+
+    const images = [
+        'img/9.png',
+        'img/10.png',
+        'img/8.png'
+    ];
+    let currentIndex = 0;
+
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % images.length;
+        sliderImg.src = images[currentIndex];
+    }, 3000); // zmiana co 3 sekundy
+});

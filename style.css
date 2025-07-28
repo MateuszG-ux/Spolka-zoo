@@ -37,7 +37,7 @@ header.shrink {
 }
 
 .nav-container {
-    max-width: 1150px;
+    max-width: 1050px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -69,18 +69,43 @@ header.shrink {
     transition: color 0.2s ease;
 }
 
+.nav-links img{
+    margin:auto;
+    width:25px;
+    height:25px;
+}
+
 .nav-links a:hover {
-    color: grey;
+    color: var(--main-green);
 }
 
 .nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* odstęp między ikoną a tekstem */
     background-color: #78cd31;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 18px;
+    padding: 12px 20px;
+    color: white !important;
+    border-radius: 25px;
     text-decoration: none;
     font-weight: bold;
+    font-size: 18px;
+    height: auto;
+    transition: background-color 0.3s ease;
 }
+
+.nav-btn:hover {
+    background-color: var(--main-green-dark);
+    color: #333 !important;
+    cursor: pointer;
+}
+
+.nav-btn img {
+    width: 36px;
+    height: 36px;
+}
+
+
 
 /* Hamburger styles */
 .hamburger {
@@ -144,11 +169,11 @@ header.shrink {
     padding-left: 5px;
     margin-top: 200px;
     padding-right: 10px;
-    color: #78cd31;
+    color: #CCFF00;
     font-size: 4rem;
     font-weight: 700;
     letter-spacing: 1px;
-    text-shadow: 1.5px 1.5px 3px rgba(0,0,0,0.9);
+    text-shadow: 1.5px 1.5px 3px rgba(0,0,0,0.4);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     user-select: none;
     transition: color 0.3s ease;
@@ -184,13 +209,13 @@ header.shrink {
 
 .slide-in {
     animation: slideIn 0.8s forwards;
-    color: #78cd31;
+    color: #CCFF00;
     filter: none;
 }
 
 .slide-out {
     animation: slideOut 0.8s forwards;
-    color: #78cd31;
+    color: #CCFF00;
     filter: none;
 }
 
@@ -257,6 +282,11 @@ header.shrink {
 }
 
 /* === GALERIA === */
+
+.gallery-slider {
+        display: none;
+    }
+
 .gallery-section {
     max-width: 1320px;
     margin: 40px auto 80px;
@@ -307,7 +337,7 @@ header.shrink {
 
 .reserve-btn {
     display: inline-block;
-    background-color: var(--main-green);
+    background-color: #78cd31;
     color: white;
     padding: 15px 40px;
     border-radius: 24px;
@@ -344,9 +374,9 @@ header.shrink {
 
 .contact-box h3 {
     font-size: 2.4rem;
-    color: var(--main-green);
+    color: #CCFF00;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.9);
+    text-shadow: 1.5px 1.5px 3px rgba(0,0,0,0.4);
 }
 
 .contact-box p {
@@ -444,43 +474,42 @@ footer {
     }
 
     /* Navbar: kontener z pozycją względną */
-.nav-container {
-    position: relative;
-}
+    .nav-container {
+        position: relative;
+    }
 
-/* Burger menu stylowane z animacją */
-/* Domyślnie ukryte */
+    /* Burger menu stylowane z animacją */
     .nav-links {
-      position: absolute;
-       top: 100%;
-       right: 0;
-       background-color: white;
-       flex-direction: column;
-       align-items: flex-start;
-       padding: 15px 20px;
-       gap: 15px;
-       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-bottom-left-radius: 12px;
-      width: max-content;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: white;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+        gap: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-bottom-left-radius: 12px;
+        width: max-content;
 
-       display: none;         /* DOMYŚLNIE UKRYTE */
-       max-height: 0;
-       overflow: hidden;
-      transition: max-height 0.3s ease;
-       z-index: 1050;
+        display: none;         
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        z-index: 1050;
     }
 
     /* Kiedy otwarte */
     .nav-links.open {
-       display: flex;         /* POKAŻ */
-     max-height: 250px;     /* ROZWIŃ */
+        display: flex;         
+        max-height: 250px;     
     }
 
     /* Blokowanie przewijania gdy menu otwarte */
     body.no-scroll {
-      overflow: hidden;
+        overflow: hidden;
     }
-    
+
     .nav-links a {
         font-size: 16px;
     }
@@ -515,13 +544,13 @@ footer {
 
     /* Graphic Section - pozycjonowanie bloków */
     .info-block {
-     display: none !important;
+        display: none !important;
     }
 
     .natural-image {
-    content: url('img/your-mobile-image.png');
-    width: 100%;
-    height: auto;
+        content: url('img/your-mobile-image.png');
+        width: 100%;
+        height: auto;
     }
 
     .graphic-section {
@@ -532,13 +561,25 @@ footer {
     }
 
     /* Galeria */
+    /* Ukrywamy standardową galerię */
     .gallery-container {
-        flex-direction: column;
-        gap: 15px;
+        display: none;
     }
-    .gallery-item {
+
+    /* Pokazujemy slider z jednym zdjęciem */
+    .gallery-slider {
+        display: block;
         width: 100%;
-        aspect-ratio: auto; /* elastyczne dopasowanie */
+        max-width: 400px;
+        margin: 20px auto;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .gallery-slider img {
+        width: 100%;
+        height: auto;
+        display: block;
     }
 
     /* Kontakt */
@@ -548,6 +589,20 @@ footer {
         margin: 100px auto 0;
         text-align: center;
         padding: 0 20px;
+    }
+
+    /* **UKRYWAMY TEKSTY KONTAKTOWE I WSTAWIAMY GRAFIKĘ** */
+    .contact-box {
+        display: none;
+    }
+
+    .contact-background {
+        background-image: url('img/your-mobile-image2.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        height: auto; /* zmieniaj w razie potrzeby */
+        padding: 100px 20px; /* dostosuj według potrzeby */
     }
 
     /* Stopka */
@@ -560,5 +615,153 @@ footer {
         gap: 15px;
         flex-wrap: wrap;
         justify-content: center;
+    }
+}
+
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    /* Navbar: zmniejszamy padding i rozmiar logo */
+    #navbar-logo {
+        height: 85px;
+    }
+
+    .nav-container {
+        padding: 0 20px;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+    }
+
+    .nav-btn {
+        padding: 10px 16px;
+        font-size: 16px;
+    }
+
+    /* Hero: zmniejszamy marginesy i font */
+    .hero-wrapper {
+        padding: 0 30px;
+    }
+
+    .hero-logo {
+        max-width: 60%;
+        margin-left: 0;
+    }
+
+    .hero-logo img {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .hero-slogans {
+        font-size: 3rem;
+        margin-top: 120px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* Graphic Section - pozycjonowanie bloków (można dostosować lub ukryć) */
+    .info-block {
+        display: none !important;
+    }
+
+    .natural-image {
+        content: url('img/your-mobile-image.png');
+        width: 100%;
+        height: auto;
+    }
+
+    .graphic-section {
+        padding: 40px 20px;
+    }
+
+    /* Galeria - wyświetl w flex z możliwością przewijania */
+    .gallery-container {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        gap: 15px;
+    }
+
+    .gallery-item {
+        flex: 0 0 auto; /* nie zwija się */
+        width: 280px; /* szersze niż telefon */
+        aspect-ratio: 1 / 1;
+    }
+
+    /* Ukrywamy slider na tabletach */
+    .gallery-slider {
+        display: none;
+    }
+
+    /* Kontakt */
+    .contact-section {
+        flex-direction: row;
+        gap: 50px;
+        margin: 120px auto 0;
+        text-align: left;
+        padding: 0 30px;
+    }
+
+    /* Stopka */
+    .footer-top {
+        flex-direction: row;
+        gap: 50px;
+        align-items: flex-start;
+    }
+
+    .footer-links {
+        gap: 20px;
+    }
+
+    /* Kontakt - dostosowanie do tabletów */
+    .contact-box {
+        display: none; /* ukrywamy teksty, tak jak na mobile */
+    }
+
+    .contact-background {
+        background-image: url('img/your-mobile-image2.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        height: auto;
+        padding: 80px 30px;
+    }
+
+    /* Drobne poprawki w hero, jeśli potrzeba */
+    .hero-slogans {
+        text-align: center; /* często na tabletach lepiej wycentrować */
+    }
+
+    /* Hamburger (jeśli używasz) */
+    .hamburger {
+        display: flex;
+        cursor: pointer;
+        /* możesz też tu ustawić rozmiar, jeśli jest hamburger */
+    }
+
+    /* Nav-links - jeśli chcesz mieć dropdown na tabletach */
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: white;
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-bottom-left-radius: 12px;
+        width: max-content;
+        display: none; /* domyślnie ukryte */
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        z-index: 1050;
+    }
+
+    .nav-links.open {
+        display: flex;
+        max-height: 250px;
     }
 }

@@ -48,3 +48,34 @@ const navLinks = document.getElementById('nav-links');
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('open');
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const body = document.body;
+
+    // Otwórz / zamknij burger
+    hamburger.addEventListener('click', function (e) {
+        e.stopPropagation(); // zapobiegaj propagacji kliknięcia
+        navLinks.classList.toggle('open');
+        body.classList.toggle('no-scroll');
+    });
+
+    // Zamknij po kliknięciu poza menu
+    document.addEventListener('click', function (e) {
+        if (navLinks.classList.contains('open') &&
+            !navLinks.contains(e.target) &&
+            !hamburger.contains(e.target)) {
+            navLinks.classList.remove('open');
+            body.classList.remove('no-scroll');
+        }
+    });
+
+    // Zamknij po kliknięciu linka w menu
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+            body.classList.remove('no-scroll');
+        });
+    });
+});

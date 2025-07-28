@@ -443,24 +443,46 @@ footer {
         height: 70px;
     }
 
-    /* Ukrywamy domyślnie menu, będzie wysuwane po kliknięciu */
-    .nav-links {
-      position: absolute;
-      top: 100%;
-      right: 0;
-      background-color: white;
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 15px 20px;
-      gap: 15px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-bottom-left-radius: 12px;
-      display: none; /* domyślnie schowane */
-    }
+    /* Navbar: kontener z pozycją względną */
+.nav-container {
+    position: relative;
+}
+
+/* Burger menu stylowane z animacją */
+.nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+    gap: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 12px;
+    display: flex;
+    width: max-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    z-index: 1050;
+}
+
+.nav-links.open {
+    max-height: 250px; /* dopasuj do ilości linków */
+}
+
+/* Blokowanie przewijania gdy menu otwarte */
+body.no-scroll {
+    overflow: hidden;
+}
+
 
     .nav-links.open {
         display: flex; /* pokazujemy tylko po kliknięciu */
     }
+
+    
     .nav-links a {
         font-size: 16px;
     }

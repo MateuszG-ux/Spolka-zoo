@@ -499,13 +499,15 @@ footer {
 
     /* Graphic Section - pozycjonowanie bloków */
     .info-block {
-        position: static;
-        max-width: 100%;
-        margin: 20px auto;
-        text-shadow: none;
-        color: var(--main-green-dark);
-        padding: 0 10px;
+     display: none !important;
     }
+
+    .natural-image {
+    content: url('img/your-mobile-image.png');
+    width: 100%;
+    height: auto;
+    }
+
     .graphic-section {
         padding: 30px 20px;
     }

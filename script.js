@@ -1,4 +1,4 @@
-// === Zmiana wyglądu navbaru podczas scrollowania ===
+// === NAVBAR scroll shrink + logo ===
 window.addEventListener('scroll', () => {
     const navbar = document.getElementById('navbar');
     const logo = document.getElementById('navbar-logo');
@@ -38,31 +38,24 @@ function animateSlogan() {
 
 window.addEventListener('load', () => {
     sloganElement.classList.add('slide-in');
+    setInterval(animateSlogan, 10000);
 });
 
-setInterval(animateSlogan, 10000);
-
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('nav-links');
-
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-const hamburger = document.querySelector('.hamburger');
+// === Hamburger menu ===
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     const body = document.body;
 
-    // Otwórz / zamknij burger
-    hamburger.addEventListener('click', function (e) {
-        e.stopPropagation(); // zapobiegaj propagacji kliknięcia
+    // Klik w hamburger
+    hamburger.addEventListener('click', e => {
+        e.stopPropagation();
         navLinks.classList.toggle('open');
         body.classList.toggle('no-scroll');
     });
 
-    // Zamknij po kliknięciu poza menu
-    document.addEventListener('click', function (e) {
+    // Zamknięcie po kliknięciu poza menu
+    document.addEventListener('click', e => {
         if (navLinks.classList.contains('open') &&
             !navLinks.contains(e.target) &&
             !hamburger.contains(e.target)) {
@@ -71,7 +64,7 @@ const hamburger = document.querySelector('.hamburger');
         }
     });
 
-    // Zamknij po kliknięciu linka w menu
+    // Zamknięcie po kliknięciu w link
     navLinks.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('open');

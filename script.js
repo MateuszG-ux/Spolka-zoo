@@ -22,15 +22,15 @@ const slogans = [
 ];
 
 const sloganElement = document.getElementById('slogan-text');
-let currentIndex = 0;
+let sloganIndex = 0;
 
 function animateSlogan() {
     sloganElement.classList.remove('slide-in');
     sloganElement.classList.add('slide-out');
 
     setTimeout(() => {
-        currentIndex = (currentIndex + 1) % slogans.length;
-        sloganElement.textContent = slogans[currentIndex];
+        sloganIndex = (sloganIndex + 1) % slogans.length;
+        sloganElement.textContent = slogans[sloganIndex];
         sloganElement.classList.remove('slide-out');
         sloganElement.classList.add('slide-in');
     }, 800);
@@ -75,20 +75,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// === Automatyczny slider galerii na telefonach ===
+// === Automatyczny slider galerii na telefonach z animacją fade i przesunięciem ===
 window.addEventListener('load', () => {
-    const sliderImg = document.querySelector('.gallery-slider img');
-    if (!sliderImg) return; // Jeśli nie ma slidera, nic nie robimy
+    const sliderImages = document.querySelectorAll('.gallery-slider img');
+    if (!sliderImages.length) return; // jeśli nie ma slidera, nic nie robimy
 
-    const images = [
-        'img/9.png',
-        'img/10.png',
-        'img/8.png'
-    ];
     let currentIndex = 0;
 
+    // Na start pokazujemy pierwszy slajd
+    sliderImages.forEach((img, i) => {
+        img.classList.toggle('active', i === 0);
+    });
+
     setInterval(() => {
-        currentIndex = (currentIndex + 1) % images.length;
-        sliderImg.src = images[currentIndex];
-    }, 3000); // zmiana co 3 sekundy
+        sliderImages[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % sliderImages.length;
+        sliderImages[currentIndex].classList.add('active');
+    }, 4000); // zmiana co 4 sekundy
 });

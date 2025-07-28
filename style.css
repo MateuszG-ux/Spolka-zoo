@@ -448,6 +448,7 @@ footer {
 /* === RESPONSYWNOŚĆ === */
 
 /* Mobilki (max-width 768px) */
+/* Mobilki (max-width 768px) */
 @media (max-width: 768px) {
     /* Hamburger */
     .hamburger {
@@ -522,7 +523,11 @@ footer {
     .hero-wrapper {
         flex-direction: column;
         align-items: center;
-        padding: 0 20px;
+        padding: 0 20px 40px; /* zmniejszony padding dolny */
+        background-image: url('img/11.png');
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: contain; /* mniejsze tło */
     }
     .hero-logo {
         max-width: 80%;
@@ -571,15 +576,37 @@ footer {
         display: block;
         width: 100%;
         max-width: 400px;
-        margin: 20px auto;
+        margin: 20px auto 0;
         position: relative;
         overflow: hidden;
+        border-radius: 15px; /* border-radius slidera */
     }
 
     .gallery-slider img {
         width: 100%;
         height: auto;
         display: block;
+        border-radius: 15px; /* border-radius zdjęć */
+        opacity: 0;
+        transform: translateX(50px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    /* Klasa aktywnego slajdu */
+    .gallery-slider img.active {
+        opacity: 1;
+        transform: translateX(0);
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Usuwamy biały pasek pod sliderem */
+    .gallery-slider {
+        padding-bottom: 0;
+        margin-bottom: 0;
     }
 
     /* Kontakt */
@@ -618,7 +645,7 @@ footer {
     }
 }
 
-
+/* Tabletki (max-width 1024px and min-width 769px) */
 @media (max-width: 1024px) and (min-width: 769px) {
     /* Navbar: zmniejszamy padding i rozmiar logo */
     #navbar-logo {
@@ -658,6 +685,7 @@ footer {
         margin-top: 120px;
         padding-left: 10px;
         padding-right: 10px;
+        text-align: center; /* często na tabletach wycentrowane */
     }
 
     /* Graphic Section - pozycjonowanie bloków (można dostosować lub ukryć) */
@@ -729,19 +757,13 @@ footer {
         padding: 80px 30px;
     }
 
-    /* Drobne poprawki w hero, jeśli potrzeba */
-    .hero-slogans {
-        text-align: center; /* często na tabletach lepiej wycentrować */
-    }
-
     /* Hamburger (jeśli używasz) */
     .hamburger {
         display: flex;
         cursor: pointer;
-        /* możesz też tu ustawić rozmiar, jeśli jest hamburger */
     }
 
-    /* Nav-links - jeśli chcesz mieć dropdown na tabletach */
+    /* Nav-links - dropdown */
     .nav-links {
         position: absolute;
         top: 100%;
@@ -753,7 +775,7 @@ footer {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         border-bottom-left-radius: 12px;
         width: max-content;
-        display: none; /* domyślnie ukryte */
+        display: none;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;

@@ -353,6 +353,12 @@ header.shrink {
 }
 
 /* === KONTAKT === */
+.contact-img-mobile {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
 .contact-background {
     background-image: url('img/12.png');
     background-size: cover;
@@ -606,32 +612,19 @@ footer {
     }
 
     /* Kontakt */
-    .contact-section {
-        flex-direction: column;
-        gap: 40px;
-        margin: 100px auto 0;
-        text-align: center;
-        padding: 0 20px;
+    .contact-img-mobile {
+        display: block;
     }
 
-    .contact-box {
+    .contact-section {
         display: none;
     }
 
     .contact-background {
-        background-image: url('img/your-mobile-image2.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain; /* pokazujemy całą grafikę */
-    background-color: black; /* lub inny kolor w tle - wypełni wolne przestrzenie */
-
-    width: 100vw;
-    height: 100vh;
-
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow: hidden;
+        background: none !important;
+        padding: 0;
+        margin: 0;
+        height: auto;
     }
 
     /* Stopka */
@@ -728,32 +721,19 @@ footer {
         margin-top: 7px;
     }
 
-    .contact-section {
-        flex-direction: row;
-        gap: 50px;
-        margin: 120px auto 0;
-        text-align: left;
-        padding: 0 30px;
+    .contact-img-mobile {
+        display: block;
     }
 
-    .contact-box {
+    .contact-section {
         display: none;
     }
 
     .contact-background {
-        background-image: url('img/your-mobile-image2.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain; /* pokazujemy całą grafikę */
-    background-color: black; /* lub inny kolor w tle - wypełni wolne przestrzenie */
-
-    width: 100vw;
-    height: 100vh;
-
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow: hidden;
+        background: none !important;
+        padding: 0;
+        margin: 0;
+        height: auto;
     }
 
     .footer-top {

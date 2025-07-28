@@ -627,7 +627,7 @@ footer {
         background-position: center;
         background-size: contain;
         height: auto; /* zmieniaj w razie potrzeby */
-        padding: 100px 20px 0 20px; /* usunięty dolny padding */
+        padding: 100px 0px 0 0px; /* usunięty dolny padding */
     }
 
     /* Stopka */

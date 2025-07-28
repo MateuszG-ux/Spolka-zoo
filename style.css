@@ -620,14 +620,18 @@ footer {
 
     .contact-background {
         background-image: url('img/your-mobile-image2.png');
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-        width: 100vw;
-        height: 100vh;
-        padding: 100px 0 0 0;
-        margin: 0;
-        box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain; /* pokazujemy całą grafikę */
+    background-color: black; /* lub inny kolor w tle - wypełni wolne przestrzenie */
+
+    width: 100vw;
+    height: 100vh;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
     }
 
     /* Stopka */
@@ -738,14 +742,18 @@ footer {
 
     .contact-background {
         background-image: url('img/your-mobile-image2.png');
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-        width: 100vw;
-        height: 100vh;
-        padding: 100px 0 0 0;
-        margin: 0;
-        box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain; /* pokazujemy całą grafikę */
+    background-color: black; /* lub inny kolor w tle - wypełni wolne przestrzenie */
+
+    width: 100vw;
+    height: 100vh;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
     }
 
     .footer-top {

@@ -622,12 +622,15 @@ footer {
     }
 
     .contact-background {
-        background-image: url('img/your-mobile-image2.png');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        height: auto; /* zmieniaj w razie potrzeby */
-        padding: 100px 0px 0 0px; /* usunięty dolny padding */
+    background-image: url('img/your-mobile-image2.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; /* cover zamiast contain, by wypełnić cały obszar */
+    width: 100vw;            /* pełna szerokość viewportu */
+    height: 100vh;           /* lub dopasuj wysokość według potrzeb */
+    padding: 100px 0 0 0;    /* jeśli chcesz zostawić górny padding */
+    margin: 0;               /* usuń marginesy */
+    box-sizing: border-box;  /* żeby padding się dobrze liczył */
     }
 
     /* Stopka */

@@ -448,7 +448,6 @@ footer {
 /* === RESPONSYWNOŚĆ === */
 
 /* Mobilki (max-width 768px) */
-/* Mobilki (max-width 768px) */
 @media (max-width: 768px) {
     /* Hamburger */
     .hamburger {
@@ -609,6 +608,13 @@ footer {
         margin-bottom: 0;
     }
 
+    .gallery-section h2 {
+        font-size: 2rem; /* lub inna wartość, która Ci pasuje */
+        text-align: center;
+        padding: 0 10px;
+        margin-top: 7px; /* ew. dostosuj odstęp */
+    }
+
     /* Kontakt */
     .contact-section {
         flex-direction: column;
@@ -721,6 +727,13 @@ footer {
     /* Ukrywamy slider na tabletach */
     .gallery-slider {
         display: none;
+    }
+
+    .gallery-section h2 {
+        font-size: 2rem; /* lub inna wartość, która Ci pasuje */
+        text-align: center;
+        padding: 0 10px;
+        margin-top: 7px; /* ew. dostosuj odstęp */
     }
 
     /* Kontakt */

@@ -448,7 +448,6 @@ footer {
         position: fixed;
         top: 90px; /* pod navbar */
         right: 0;
-        height: calc(100vh - 90px);
         width: 250px;
         background-color: white;
         flex-direction: column;

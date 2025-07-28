@@ -56,9 +56,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Zamknięcie po kliknięciu poza menu
     document.addEventListener('click', e => {
-        if (navLinks.classList.contains('open') &&
+        if (
+            navLinks.classList.contains('open') &&
             !navLinks.contains(e.target) &&
-            !hamburger.contains(e.target)) {
+            !hamburger.contains(e.target)
+        ) {
             navLinks.classList.remove('open');
             body.classList.remove('no-scroll');
         }

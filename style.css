@@ -37,7 +37,7 @@ header.shrink {
 }
 
 .nav-container {
-    max-width: 1050px;
+    max-width: 1150px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -370,10 +370,10 @@ header.shrink {
 
 .contact-section {
     max-width: 1350px;
-    margin: 190px auto 0;
+    margin: 50px auto 0;
     display: flex;
     justify-content: space-around;
-    gap: 130px;
+    gap: 70px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
 }

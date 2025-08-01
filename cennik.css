@@ -1,12 +1,3 @@
-.hero-cennik {
-  display:none;
-}
-
-.hero-cennik.no-text .hero-wrapper,
-.hero-cennik.no-text .hero-slogans {
-  display: none;
-}
-
 /* === SEKCJA CENNIK === */
 .pricing-section {
   max-width: 1200px;
@@ -167,11 +158,6 @@
   position: relative;
 }
 
-.hero-cennik.no-text .hero-wrapper,
-.hero-cennik.no-text .hero-slogans {
-  display: none;
-}
-
   .pricing-card {
     flex: 1 1 100%;
     max-width: 100%;
@@ -208,11 +194,6 @@
     height: auto;
     padding-top: 56.25%;
   }
-
-  .hero-cennik.no-text .hero-wrapper,
-.hero-cennik.no-text .hero-slogans {
-  display: none;
-}
 
   .pricing-main-title {
     font-size: 2.2rem;
@@ -260,4 +241,5 @@
     margin-left: 10px;
     margin-right: 10px;
   }
+
 }

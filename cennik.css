@@ -269,13 +269,19 @@
 
   .pricing-card {
     padding: 20px;
-    min-width: auto; /* usuń minimalną szerokość, bo na telefonie to blokuje dopasowanie */
+    min-width: auto; /* usuń minimalną szerokość na telefonach */
   }
 
   .pricing-table th,
   .pricing-table td {
     padding: 10px 6px;
     font-size: 0.95rem;
+    min-width: auto;
+    white-space: normal; /* pozwól zawijanie tekstu */
+  }
+
+  .pricing-table {
+    overflow-x: auto; /* umożliw scroll, jeśli potrzeba */
   }
 
   .pricing-note {
@@ -283,8 +289,7 @@
     font-size: 0.95rem;
   }
 
-  /* --- SPECJALNIE DLA TABELI KARNETY --- */
-  /* tylko w tej cenie jest tabela Karnety */
+  /* --- SPECJALNIE DLA TABELI KARNETY (trzecia karta) --- */
   .pricing-card:nth-child(3) .pricing-table {
     display: block;
     border: none;
@@ -296,7 +301,7 @@
   }
 
   .pricing-card:nth-child(3) .pricing-table thead tr {
-    display: none; /* ukryj nagłówek, bo nie ma już sensu */
+    display: none; /* ukryj nagłówek */
   }
 
   .pricing-card:nth-child(3) .pricing-table tbody tr {

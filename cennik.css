@@ -184,6 +184,12 @@
   }
 }
 
+.pricing-note,
+.promotion-box {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
 @media (max-width: 600px) {
   .hero-cennik {
     background-size: contain;
@@ -231,4 +237,10 @@
     flex: 1 1 100%;
     max-width: 100%;
   }
+
+  .pricing-note,
+.promotion-box {
+    margin-left: 8px;
+    margin-right: 8px;
+}
 }

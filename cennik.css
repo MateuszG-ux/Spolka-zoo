@@ -1,3 +1,9 @@
+/* Domyślnie na desktopie: brak tła */
+.hero-cennik {
+  background: none;
+  height: auto;
+}
+
 /* === SEKCJA CENNIK === */
 .pricing-section {
   max-width: 1200px;
@@ -148,16 +154,6 @@
 
 /* === RESPONSYWNOŚĆ === */
 @media (max-width: 900px) {
-  /* === HERO (CENNIK) === */
-.hero-cennik {
-  height: 100vh;
-  background-image: url('img/banner-cennik.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-}
-
   .pricing-card {
     flex: 1 1 100%;
     max-width: 100%;
@@ -189,10 +185,10 @@
 @media (max-width: 600px) {
   .hero-cennik {
     background-image: url('img/banner-cennik.png');
-    background-size: contain;
-    background-position: center center;
-    height: auto;
-    padding-top: 56.25%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60vh; /* dopasuj jak potrzebujesz */
   }
 
   .pricing-main-title {
@@ -243,3 +239,4 @@
   }
 
 }
+

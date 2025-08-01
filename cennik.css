@@ -62,9 +62,7 @@
 
 .pricing-card h3 {
   font-size: 1.8rem;
-  margin-bottom: 2px;
-  margin-top: 5px;
-  margin-left: 15px;
+  margin-bottom: 10px;
   color: var(--main-green);
   border-bottom: 2px solid #ccc;
   padding-bottom: 10px;
@@ -106,14 +104,43 @@
   margin-top: 5px;
 }
 
-/* Domyślnie 4. kafelek ukryty */
-.mobile-only-card {
-  display: none;
+/* === KAFELKI SPECJALNE === */
+.karnety-card {
+  display: block; /* domyślnie widoczny */
 }
 
-/* 3. kafelek Karnety - domyślnie widoczny */
-.karnety-card {
-  display: block;
+.mobile-only-card {
+  display: none; /* ukryty na desktopie */
+}
+
+/* === TABELA PIONOWA W MOBILE-ONLY KAFELKU === */
+.vertical-mobile-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.vertical-mobile-table thead {
+  background-color: #f4f4f4;
+}
+
+.vertical-mobile-table th,
+.vertical-mobile-table td {
+  padding: 10px 8px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.vertical-mobile-table td:last-child {
+  text-align: right;
+  color: var(--main-green);
+  font-weight: 700;
+}
+
+.vertical-mobile-table td:first-child {
+  font-weight: 600;
+  color: #444;
 }
 
 /* === PROMOCJA === */
@@ -128,7 +155,9 @@
   padding: 15px 25px;
   border-radius: 8px;
   max-width: 850px;
-  margin: 40px auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
   font-weight: 600;
 }
 
@@ -160,7 +189,7 @@
     background-size: contain;
     background-position: center center;
     height: auto;
-    padding-top: 56.25%; /* proporcja 16:9 jeśli zdjęcie ma taki ratio */
+    padding-top: 56.25%;
   }
 
   .pricing-main-title {
@@ -170,7 +199,7 @@
 
   .pricing-card {
     padding: 20px;
-    min-width: auto; /* usuń minimalną szerokość na telefonach */
+    min-width: auto;
   }
 
   .pricing-table th,
@@ -178,11 +207,11 @@
     padding: 10px 6px;
     font-size: 0.95rem;
     min-width: auto;
-    white-space: normal; /* pozwól zawijanie tekstu */
+    white-space: normal;
   }
 
   .pricing-table {
-    overflow-x: auto; /* scroll jeśli tabela szeroka */
+    overflow-x: auto;
   }
 
   .pricing-note {
@@ -190,35 +219,16 @@
     font-size: 0.95rem;
   }
 
-  /* Ukrywamy 3. kafelek Karnety */
+  /* Ukryj kafelek 3 (karnety poziome) */
   .karnety-card {
     display: none !important;
   }
 
-  /* Pokazujemy 4. kafelek na telefonie */
+  /* Pokaż kafelek 4 (mobilny z pionową tabelą) */
   .mobile-only-card {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     flex: 1 1 100%;
     max-width: 100%;
   }
-}
-
-/* --- Lista w 4. kafelku zamiast tabeli --- */
-.pricing-list-mobile {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.pricing-list-mobile li {
-  padding: 8px 0;
-  border-bottom: 1px solid #ccc;
-  font-weight: 700;
-  color: var(--main-green);
-}
-
-.pricing-list-mobile li strong {
-  font-weight: 600;
-  color: #444;
 }

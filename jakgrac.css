@@ -6,14 +6,14 @@ html, body {
 .page-header-image {
   width: 100%;
   height: auto;
-  display: block;
+  display: none;
   object-fit: cover;
 }
 
 .page-header-image img {
   width: 100vw;
   height: auto;
-  display: block;
+  display: none;
   object-fit: cover;
 }
 
@@ -149,6 +149,20 @@ html, body {
 
 /* === MOBILKI I TABLETY (max 900px) === */
 @media (max-width: 900px) {
+  .page-header-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.page-header-image img {
+  width: 100vw;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
   .rules-wrapper {
     display: none;
   }
@@ -169,6 +183,20 @@ html, body {
 
 /* === UKRYCIE ZBĘDNYCH ELEMENTÓW NA MAŁYCH EKRANACH === */
 @media (max-width: 500px) {
+  .page-header-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.page-header-image img {
+  width: 100vw;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
   .rules-wrapper img.decor {
     display: none;
   }

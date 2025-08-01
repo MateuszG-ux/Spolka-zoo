@@ -1,11 +1,5 @@
-/* === HERO (CENNIK) === */
 .hero-cennik {
-  height: 100vh;
-  background-image: url('img/banner-cennik.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
+  display:none;
 }
 
 .hero-cennik.no-text .hero-wrapper,
@@ -163,6 +157,21 @@
 
 /* === RESPONSYWNOŚĆ === */
 @media (max-width: 900px) {
+  /* === HERO (CENNIK) === */
+.hero-cennik {
+  height: 100vh;
+  background-image: url('img/banner-cennik.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero-cennik.no-text .hero-wrapper,
+.hero-cennik.no-text .hero-slogans {
+  display: none;
+}
+
   .pricing-card {
     flex: 1 1 100%;
     max-width: 100%;
@@ -193,11 +202,17 @@
 
 @media (max-width: 600px) {
   .hero-cennik {
+    background-image: url('img/banner-cennik.png');
     background-size: contain;
     background-position: center center;
     height: auto;
     padding-top: 56.25%;
   }
+
+  .hero-cennik.no-text .hero-wrapper,
+.hero-cennik.no-text .hero-slogans {
+  display: none;
+}
 
   .pricing-main-title {
     font-size: 2.2rem;

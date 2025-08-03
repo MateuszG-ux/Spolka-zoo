@@ -525,14 +525,14 @@ footer {
 
     /* Hero */
     .hero {
-    position: relative;
-    height: 95vh;
-    background-image: url('img/11.png');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    position: relative !important;
+    height: 95vh !important;
+    background-image: url('img/11.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
 }
 
     .hero-wrapper {
@@ -674,14 +674,14 @@ footer {
     }
 
     .hero {
-    position: relative;
-    height: 95vh;
-    background-image: url('img/11.png');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    position: relative !important;
+    height: 95vh !important;
+    background-image: url('img/11.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
 }
 
     .hero-wrapper {
@@ -797,4 +797,5 @@ footer {
         display: flex;
         max-height: 250px;
     }
+
 }

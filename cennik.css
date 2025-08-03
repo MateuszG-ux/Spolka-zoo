@@ -1,3 +1,6 @@
+.hero-cennik {
+  display:none;
+}
 
 .hero-cennik.no-text .hero-wrapper,
 .hero-cennik.no-text .hero-slogans {
@@ -153,13 +156,6 @@
 }
 
 /* === RESPONSYWNOŚĆ === */
-/* Ukryj tylko na desktopie */
-@media (min-width: 901px) {
-  .hero-cennik {
-    display: none;
-  }
-}
-
 @media (max-width: 900px) {
   /* === HERO (CENNIK) === */
 .hero-cennik {
@@ -266,5 +262,4 @@
     margin-left: 10px;
     margin-right: 10px;
   }
-
 }

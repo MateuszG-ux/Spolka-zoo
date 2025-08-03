@@ -525,14 +525,7 @@ footer {
 
     /* Hero */
     .hero {
-    position: relative !important;
-    height: 95vh !important;
-    background-image: url('img/11.png') !important;
-    background-size: cover !important;
-    background-position: center !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: flex-start !important;
+    height: 30vh !important;
 }
 
     .hero-wrapper {
@@ -674,14 +667,7 @@ footer {
     }
 
     .hero {
-    position: relative !important;
-    height: 95vh !important;
-    background-image: url('img/11.png') !important;
-    background-size: cover !important;
-    background-position: center !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: flex-start !important;
+    height: 30vh !important;
 }
 
     .hero-wrapper {
@@ -799,3 +785,4 @@ footer {
     }
 
 }
+

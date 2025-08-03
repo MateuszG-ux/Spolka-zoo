@@ -19,6 +19,7 @@ body {
     padding-top: 90px; /* wysokość navbaru */
 }
 
+
 /* === NAVBAR === */
 header {
     position: fixed;
@@ -775,4 +776,5 @@ footer {
         display: flex;
         max-height: 250px;
     }
+
 }

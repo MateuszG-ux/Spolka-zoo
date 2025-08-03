@@ -37,7 +37,7 @@ header.shrink {
 }
 
 .nav-container {
-    max-width: 1150px;
+    max-width: 1850px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -83,7 +83,7 @@ header.shrink {
     display: flex;
     align-items: center;
     gap: 10px; /* odstęp między ikoną a tekstem */
-    background-color: #78cd31;
+    background-color: #CCFF00;
     padding: 12px 20px;
     color: white !important;
     border-radius: 25px;
@@ -95,7 +95,7 @@ header.shrink {
 }
 
 .nav-btn:hover {
-    background-color: var(--main-green-dark);
+    background-color: #78cd31;
     color: #333 !important;
     cursor: pointer;
 }
@@ -131,8 +131,8 @@ header.shrink {
 /* === HERO === */
 .hero {
     position: relative;
-    height: 100vh;
-    background-image: url('img/11.png');
+    height: 35vh;
+    background-image: url('img/11.pngw');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -157,7 +157,7 @@ header.shrink {
 .hero-logo img {
     width: 100%;
     height: auto;
-    margin-left: 150px;
+    margin-left: -90px;
 }
 
 .hero-slogans {
@@ -247,7 +247,7 @@ header.shrink {
 /* Tekstowe bloki absolutnie pozycjonowane */
 .info-block {
     position: absolute;
-    max-width: 430px;
+    max-width: 530px;
     color: #1d1d1d;
     text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
 }
@@ -270,17 +270,17 @@ header.shrink {
 /* Pozycjonowanie bloków */
 .block-1 {
     top: 120px;
-    left: 40px;
+    left: 150px;
 }
 
 .block-2 {
     top: 570px;
-    right: 40px;
+    right: 150px;
 }
 
 .block-3 {
     top: 880px;
-    left: 40px;
+    left: 150px;
 }
 
 /* === GALERIA === */

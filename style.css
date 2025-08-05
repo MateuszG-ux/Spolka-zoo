@@ -37,7 +37,7 @@ header.shrink {
 }
 
 .nav-container {
-    max-width: 1850px;
+    max-width: 1150px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -83,7 +83,7 @@ header.shrink {
     display: flex;
     align-items: center;
     gap: 10px; /* odstęp między ikoną a tekstem */
-    background-color: #CCFF00;
+    background-color: #78cd31;
     padding: 12px 20px;
     color: white !important;
     border-radius: 25px;
@@ -95,7 +95,7 @@ header.shrink {
 }
 
 .nav-btn:hover {
-    background-color: #78cd31;
+    background-color: var(--main-green-dark);
     color: #333 !important;
     cursor: pointer;
 }
@@ -131,8 +131,8 @@ header.shrink {
 /* === HERO === */
 .hero {
     position: relative;
-    height: 35vh;
-    background-image: url('img/11.pngw');
+    height: 100vh;
+    background-image: url('img/11.png');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -157,7 +157,7 @@ header.shrink {
 .hero-logo img {
     width: 100%;
     height: auto;
-    margin-left: -90px;
+    margin-left: 25px;
 }
 
 .hero-slogans {
@@ -524,10 +524,6 @@ footer {
     }
 
     /* Hero */
-    .hero {
-    height: 30vh !important;
-}
-
     .hero-wrapper {
         flex-direction: column;
         align-items: center;
@@ -666,10 +662,6 @@ footer {
         font-size: 16px;
     }
 
-    .hero {
-    height: 30vh !important;
-}
-
     .hero-wrapper {
         padding: 0 30px;
     }
@@ -783,6 +775,4 @@ footer {
         display: flex;
         max-height: 250px;
     }
-
 }
-

@@ -460,6 +460,13 @@ footer {
 
 /* Mobilki (max-width 768px) */
 @media (max-width: 768px) {
+    .header {
+        height:65px;
+    }
+
+    header.shrink {
+        height:90px;
+    }
     /* Hamburger */
     .hamburger {
         display: flex;

@@ -461,7 +461,7 @@ footer {
 /* Mobilki (max-width 768px) */
 @media (max-width: 768px) {
     .header {
-        height:65px;
+        height:45px;
     }
 
     header.shrink {
@@ -785,4 +785,5 @@ footer {
         display: flex;
         max-height: 250px;
     }
+
 }
